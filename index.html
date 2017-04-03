@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0039)https://mpowaga.github.io/react-slider/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>React Slider Example</title>
+
+  <script src="./React Slider Example_files/react.js.download"></script>
+  <script src="./React Slider Example_files/react-slider.js.download"></script>
+
+  <style>
+    body {
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+
+    .horizontal-slider {
+      width: 100%;
+      max-width: 500px;
+      height: 50px;
+      border: 1px solid grey;
+    }
+
+    .vertical-slider {
+      height: 380px;
+      width: 50px;
+      border: 1px solid grey;
+    }
+
+    .handle {
+      font-size: 0.9em;
+      text-align: center;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    .handle.active {
+      background-color: grey;
+    }
+
+    .bar {
+      position: relative;
+      background: #ddd;
+    }
+
+    .bar.bar-1 {
+      background: #f00;
+    }
+
+    .bar.bar-2 {
+      background: #0f0;
+    }
+
+    .horizontal-slider .bar {
+      top: 20px;
+      height: 10px;
+    }
+
+    .horizontal-slider .handle {
+      top: 1px;
+      width: 50px;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    .vertical-slider .handle {
+      left: 1px;
+      width: 48px;
+      line-height: 50px;
+    }
+
+    .vertical-slider .bar {
+      left: 20px;
+      width: 10px;
+    }
+
+    #horizontal-0,
+    #horizontal-1, #horizontal-2, #horizontal-3,
+    #vertical {
+      margin: 20px 10px;
+    }
+
+  </style>
+</head>
+<body>
+    <p>If you have <span id="peoplespan">100</span> people in your church</p>
+  <!--<div id="horizontal-0"></div>-->
+  <!--<div id="horizontal-1"><div style="position:relative;" class="horizontal-slider" data-reactid=".0"><div class="handle handle-0 " style="-webkit-transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);transform:translateX(0px);position:absolute;will-change:;z-index:1;" data-reactid=".0.1:$=1$0:$handle0"><div data-reactid=".0.1:$=1$0:$handle0.$0">0</div></div></div></div>-->
+  <div id="horizontal-2"><div style="position:relative;" class="horizontal-slider" data-reactid=".1"><div class="bar bar-0" style="position: absolute; left: 0px; right: 450px;" data-reactid=".1.0:$bar0"></div><div class="bar bar-1" style="position:absolute;will-change:;left:0;right:0;" data-reactid=".1.0:$bar1"></div><div class="bar bar-2" style="position: absolute; left: 450px; right: 0px;" data-reactid=".1.0:$bar2"></div><div class="handle handle-0 " style="-webkit-transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);transform:translateX(0px);position:absolute;will-change:;z-index:1;" data-reactid=".1.1:$=1$0:$handle0"><div data-reactid=".1.1:$=1$0:$handle0.$0">0</div></div><div class="handle handle-1 " style="transform: translateX(450px); position: absolute; z-index: 2;" data-reactid=".1.1:$=1$1:$handle1"><div data-reactid=".1.1:$=1$1:$handle1.$1">100</div></div></div></div>
+  <!--<div id="horizontal-3"><div style="position:relative;" class="horizontal-slider" data-reactid=".2"><div class="bar bar-0" style="position: absolute; left: 0px; right: 450px;" data-reactid=".2.0:$bar0"></div><div class="bar bar-1" style="position: absolute; left: 0px; right: 171px;" data-reactid=".2.0:$bar1"></div><div class="bar bar-2" style="position: absolute; left: 279px; right: 0px;" data-reactid=".2.0:$bar2"></div><div class="bar bar-3" style="position: absolute; left: 450px; right: 0px;" data-reactid=".2.0:$bar3"></div><div class="handle handle-0 " style="transform: translateX(0px); position: absolute; z-index: 1;" data-reactid=".2.1:$=1$0:$handle0"><div data-reactid=".2.1:$=1$0:$handle0.$0">0</div></div><div class="handle handle-1 " style="transform: translateX(279px); position: absolute; z-index: 3;" data-reactid=".2.1:$=1$1:$handle1"><div data-reactid=".2.1:$=1$1:$handle1.$1">62</div></div><div class="handle handle-2 " style="transform: translateX(450px); position: absolute; z-index: 2;" data-reactid=".2.1:$=1$2:$handle2"><div data-reactid=".2.1:$=1$2:$handle2.$2">100</div></div></div></div>-->
+  <!--<div id="vertical"><div style="position:relative;" class="vertical-slider" data-reactid=".3"><div class="bar bar-0" style="position: absolute; top: 0px; bottom: 330px;" data-reactid=".3.0:$bar0"></div><div class="bar bar-1" style="position: absolute; top: 0px; bottom: 184.8px;" data-reactid=".3.0:$bar1"></div><div class="bar bar-2" style="position: absolute; top: 145.2px; bottom: 0px;" data-reactid=".3.0:$bar2"></div><div class="bar bar-3" style="position: absolute; top: 330px; bottom: 0px;" data-reactid=".3.0:$bar3"></div><div class="handle handle-0 " style="transform: translateY(0px); position: absolute; z-index: 2;" data-reactid=".3.1:$=1$0:$handle0"><div data-reactid=".3.1:$=1$0:$handle0.$0">0</div></div><div class="handle handle-1 " style="transform: translateY(145.2px); position: absolute; z-index: 3;" data-reactid=".3.1:$=1$1:$handle1"><div data-reactid=".3.1:$=1$1:$handle1.$1">44</div></div><div class="handle handle-2 " style="transform: translateY(330px); position: absolute; z-index: 1;" data-reactid=".3.1:$=1$2:$handle2"><div data-reactid=".3.1:$=1$2:$handle2.$2">100</div></div></div></div>-->
+   <div>Your cost would be $<span id="result">10</span>/month</div>
+    <!--<input type="text" id="result" name="result" ref="result" value="0">-->
+  <script>
+    React.initializeTouchEvents(true);
+
+    var ReactSlider = React.createFactory(ReactSlider);
+
+    function map(v, f, context) {
+      return (v && v.map) ? v.map(f, context) : f.call(context, v, 0);
+    }
+
+    var Demo = React.createFactory(React.createClass({
+      displayName: 'Demo',
+
+      getInitialState: function () {
+        return { value: this.props.defaultValue }
+      },
+
+      onChange: function (value) {
+          this.setState({ value: value });
+          //React.createElement('input', value);
+          //const username = findDOMNode(this.refs.result);
+          document.getElementById('peoplespan').innerHTML = value[0];
+          document.getElementById('result').innerHTML = (value[0] / 10);
+          //aler(username);
+      },
+
+      render: function () {
+        return ReactSlider({
+            className: this.props.orientation + '-slider',
+            orientation: this.props.orientation,
+            withBars: this.props.withBars,
+            pearling: true,
+            value: this.state.value,
+            onChange: this.onChange,
+            target : this.state.value,
+            minDistance: 10,
+            step: 100,
+            min: 100,
+            max: 2000
+          },
+          map(this.state.value, function (value, i) {
+             // alert(key);
+              console.log(i);
+            return React.createElement('div', {key: i}, value);
+          })
+        );
+      }
+    }));
+
+    //React.render(Demo({ defaultValue: 0, orientation: 'horizontal' }), document.getElementById('horizontal-1'));
+    React.render(Demo({ defaultValue: [100, 2000], orientation: 'horizontal', withBars: true }), document.getElementById('horizontal-2'));
+   
+      //React.render(Demo({ defaultValue: [0, 50, 100], orientation: 'horizontal', withBars: true }), document.getElementById('horizontal-3'));
+
+  //  React.render(Demo({ defaultValue: [0, 50, 100], orientation: 'vertical', withBars: true }), document.getElementById('vertical'));
+  </script>
+
+
+</body></html>
